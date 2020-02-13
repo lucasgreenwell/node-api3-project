@@ -5,7 +5,7 @@ function Users(props) {
     return (
         <div>
             {props.users.map(user => {
-            console.log(user)
+            // console.log(user)
           return <Link to={`/users/${user.id}`}>
             <div>Username: {user.name}</div>
           </Link>

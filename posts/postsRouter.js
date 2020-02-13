@@ -77,6 +77,7 @@ router.put("/:id", (req, res) => {
 
 function validatePostId(req, res, next) {
   // do your magic!
+  
 }
 
 module.exports = router;

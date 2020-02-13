@@ -22,7 +22,7 @@ router.post("/", (req, res) => {
 
 router.post("/:id/posts", (req, res) => {
   // do your magic!
-  req.body.user_id = req.params.id
+  
   if (!req.body.text){
     res.status(400).json({message: "please include text for this post"})
   } else {
@@ -123,6 +123,9 @@ router.put("/:id", (req, res) => {
 
 function validateUserId(req, res, next) {
   // do your magic!
+  req.body.user_id = req.params.id
+
+  next()
 }
 
 function validateUser(req, res, next) {

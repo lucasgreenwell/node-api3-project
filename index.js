@@ -5,7 +5,6 @@ const server = require('./server')
 const usersRouter = require('./users/usersRouter')
 const postsRouter = require('./posts/postsRouter')
 
-
 server.use(express.json());
 server.use(cors());
 

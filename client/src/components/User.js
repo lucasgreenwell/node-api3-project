@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+
 function User(props) {
   const [user, setUser] = useState({});
   const [posts, setPosts] = useState([]);
@@ -10,7 +11,7 @@ function User(props) {
       .get(`http://localhost:5000/users/${props.id}`)
       .then(res => {
         setUser(res.data);
-        console.log(res);
+        // console.log(res);
       })
       .catch(err => console.log(err));
   }, []);
@@ -20,7 +21,7 @@ function User(props) {
       .get(`http://localhost:5000/users/${props.id}/posts`)
       .then(res => {
         setPosts(res.data);
-        console.log(res);
+        // console.log(res);
       })
       .catch(err => console.log(err));
   }, []);
